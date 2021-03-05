@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		30122C3225EC46B30056CFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30122C3025EC46B30056CFA5 /* LaunchScreen.storyboard */; };
 		30122C3D25EC46B40056CFA5 /* webcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C3C25EC46B40056CFA5 /* webcamTests.swift */; };
 		30122C4825EC46B40056CFA5 /* webcamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C4725EC46B40056CFA5 /* webcamUITests.swift */; };
+		30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */; };
+		3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */; };
+		304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */; };
+		30B3B4EE25F2AEE1003DB652 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 30B3B4ED25F2AEE1003DB652 /* Core */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		30122C4325EC46B40056CFA5 /* webcamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webcamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30122C4725EC46B40056CFA5 /* webcamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webcamUITests.swift; sourceTree = "<group>"; };
 		30122C4925EC46B40056CFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWireframe.swift; sourceTree = "<group>"; };
+		3067E1FE25F0111D0094A8E9 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = ../Core; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B3B4EE25F2AEE1003DB652 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +88,12 @@
 		30122C1925EC46B20056CFA5 = {
 			isa = PBXGroup;
 			children = (
+				3067E1FE25F0111D0094A8E9 /* Core */,
 				30122C2425EC46B20056CFA5 /* webcam */,
 				30122C3B25EC46B40056CFA5 /* webcamTests */,
 				30122C4625EC46B40056CFA5 /* webcamUITests */,
 				30122C2325EC46B20056CFA5 /* Products */,
+				30B3B4EC25F2AEE1003DB652 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +110,9 @@
 		30122C2425EC46B20056CFA5 /* webcam */ = {
 			isa = PBXGroup;
 			children = (
+				304C0F8E25F00F74005A5D22 /* CameraWireframe */,
 				30122C2525EC46B20056CFA5 /* AppDelegate.swift */,
 				30122C2725EC46B20056CFA5 /* SceneDelegate.swift */,
-				30122C2925EC46B20056CFA5 /* ContentView.swift */,
 				30122C2B25EC46B30056CFA5 /* Assets.xcassets */,
 				30122C3025EC46B30056CFA5 /* LaunchScreen.storyboard */,
 				30122C3325EC46B30056CFA5 /* Info.plist */,
@@ -136,6 +147,24 @@
 			path = webcamUITests;
 			sourceTree = "<group>";
 		};
+		304C0F8E25F00F74005A5D22 /* CameraWireframe */ = {
+			isa = PBXGroup;
+			children = (
+				30122C2925EC46B20056CFA5 /* ContentView.swift */,
+				30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */,
+				3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */,
+				304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */,
+			);
+			path = CameraWireframe;
+			sourceTree = "<group>";
+		};
+		30B3B4EC25F2AEE1003DB652 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +181,9 @@
 			dependencies = (
 			);
 			name = webcam;
+			packageProductDependencies = (
+				30B3B4ED25F2AEE1003DB652 /* Core */,
+			);
 			productName = webcam;
 			productReference = 30122C2225EC46B20056CFA5 /* webcam.app */;
 			productType = "com.apple.product-type.application";
@@ -267,7 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30122C2625EC46B20056CFA5 /* AppDelegate.swift in Sources */,
+				304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */,
+				30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */,
 				30122C2825EC46B20056CFA5 /* SceneDelegate.swift in Sources */,
+				3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */,
 				30122C2A25EC46B20056CFA5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +632,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30B3B4ED25F2AEE1003DB652 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30122C1A25EC46B20056CFA5 /* Project object */;
 }

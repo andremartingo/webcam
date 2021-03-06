@@ -71,7 +71,7 @@ class CameraViewController: UIView {
         do {
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
             session = AVCaptureSession()
-            session?.sessionPreset = AVCaptureSession.Preset.high
+            session?.sessionPreset = AVCaptureSession.Preset.medium
             session?.addInput(deviceInput)
             self.deviceInput = deviceInput
             videoPreviewLayer.session = session

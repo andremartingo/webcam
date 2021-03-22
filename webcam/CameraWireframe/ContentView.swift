@@ -24,9 +24,10 @@ struct ContentView: View {
                 Color.black.edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    CameraView(didReceivedImage: { viewModel.didReceivedImage.send($0) }, changeCamera: viewModel.didChangeCamera)
+                    CameraView(didReceivedImage: { viewModel.didReceivedImage.send($0) }, changeCamera: viewModel.didChangeCamera, didChangeQuality: viewModel.didChangeQuality)
                     
                     flipCameraButton
+                    changeQuality
                 }
             }
         }
@@ -41,6 +42,19 @@ struct ContentView: View {
                 .frame(width: 45, height: 45, alignment: .center)
                 .overlay(
                     Image(systemName: "camera.rotate.fill")
+                        .foregroundColor(.white))
+        })
+    }
+    
+    var changeQuality: some View {
+        Button(action: {
+            viewModel.changeQuality()
+        }, label: {
+            Circle()
+                .foregroundColor(Color.gray.opacity(0.2))
+                .frame(width: 45, height: 45, alignment: .center)
+                .overlay(
+                    Image(systemName: "camera")
                         .foregroundColor(.white))
         })
     }

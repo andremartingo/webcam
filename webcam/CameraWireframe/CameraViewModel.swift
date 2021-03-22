@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import Core
+import NetworkCore
 
 protocol CameraViewModelProtocol {
     var didChangeCamera: AnyPublisher<Void, Never> { get }
@@ -22,12 +22,17 @@ class CameraViewModel: CameraViewModelProtocol {
     
     let didChangeCamera: AnyPublisher<Void, Never>
     private let _changeCamera = PassthroughSubject<Void, Never>()
+
+    let didChangeQuality: AnyPublisher<Void, Never>
+    private let _changeQuality = PassthroughSubject<Void, Never>()
+
     
     public var output: Bool = false
     private let client: Client
     
     init() {
         self.didChangeCamera = _changeCamera.eraseToAnyPublisher()
+        self.didChangeQuality = _changeQuality.eraseToAnyPublisher()
         self.client = .init()
         setupBindings()
     }
@@ -42,5 +47,9 @@ class CameraViewModel: CameraViewModelProtocol {
     
     func changeCamera() {
         _changeCamera.send(())
+    }
+    
+    func changeQuality() {
+        _changeQuality.send(())
     }
 }

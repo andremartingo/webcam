@@ -18,7 +18,8 @@
 		30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */; };
 		3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */; };
 		304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */; };
-		30B3B4EE25F2AEE1003DB652 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 30B3B4ED25F2AEE1003DB652 /* Core */; };
+		30C27DEF260922B300E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DEE260922B300E69103 /* NetworkCore */; };
+		30C27DF7260922C100E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DF6260922C100E69103 /* NetworkCore */; };
 		30D8460525F2DB7300A402DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460425F2DB7300A402DC /* AppDelegate.swift */; };
 		30D8460725F2DB7300A402DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460625F2DB7300A402DC /* SceneDelegate.swift */; };
 		30D8460925F2DB7300A402DC /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460825F2DB7300A402DC /* ServerView.swift */; };
@@ -27,7 +28,6 @@
 		30D8461125F2DB7300A402DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D8460F25F2DB7300A402DC /* LaunchScreen.storyboard */; };
 		30D8461C25F2DB7300A402DC /* serverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8461B25F2DB7300A402DC /* serverTests.swift */; };
 		30D8462725F2DB7400A402DC /* serverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8462625F2DB7400A402DC /* serverUITests.swift */; };
-		30D8465F25F2DCF100A402DC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 30D8465E25F2DCF100A402DC /* Core */; };
 		30D8466725F2E0AD00A402DC /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8466625F2E0AD00A402DC /* ServerViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +80,7 @@
 		30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWireframe.swift; sourceTree = "<group>"; };
-		3067E1FE25F0111D0094A8E9 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Core; path = ../Core; sourceTree = "<group>"; };
+		30865D1A260922840072D550 /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
 		30D8460225F2DB7300A402DC /* server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D8460425F2DB7300A402DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D8460625F2DB7300A402DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B3B4EE25F2AEE1003DB652 /* Core in Frameworks */,
+				30C27DEF260922B300E69103 /* NetworkCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D8465F25F2DCF100A402DC /* Core in Frameworks */,
+				30C27DF7260922C100E69103 /* NetworkCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 		30122C1925EC46B20056CFA5 = {
 			isa = PBXGroup;
 			children = (
-				3067E1FE25F0111D0094A8E9 /* Core */,
+				30865D1A260922840072D550 /* NetworkCore */,
 				30122C2425EC46B20056CFA5 /* webcam */,
 				30122C3B25EC46B40056CFA5 /* webcamTests */,
 				30122C4625EC46B40056CFA5 /* webcamUITests */,
@@ -292,7 +292,7 @@
 			);
 			name = webcam;
 			packageProductDependencies = (
-				30B3B4ED25F2AEE1003DB652 /* Core */,
+				30C27DEE260922B300E69103 /* NetworkCore */,
 			);
 			productName = webcam;
 			productReference = 30122C2225EC46B20056CFA5 /* webcam.app */;
@@ -348,7 +348,7 @@
 			);
 			name = server;
 			packageProductDependencies = (
-				30D8465E25F2DCF100A402DC /* Core */,
+				30C27DF6260922C100E69103 /* NetworkCore */,
 			);
 			productName = server;
 			productReference = 30D8460225F2DB7300A402DC /* server.app */;
@@ -1040,13 +1040,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		30B3B4ED25F2AEE1003DB652 /* Core */ = {
+		30C27DEE260922B300E69103 /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Core;
+			productName = NetworkCore;
 		};
-		30D8465E25F2DCF100A402DC /* Core */ = {
+		30C27DF6260922C100E69103 /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Core;
+			productName = NetworkCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

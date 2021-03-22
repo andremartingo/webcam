@@ -7,7 +7,7 @@
 
 import Combine
 import UIKit
-import Core
+import NetworkCore
 
 enum State {
     case connected

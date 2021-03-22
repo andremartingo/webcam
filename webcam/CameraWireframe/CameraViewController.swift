@@ -15,14 +15,18 @@ struct CameraView: UIViewRepresentable {
     
     let didReceivedImage: (Data) -> Void
     let changeCamera: AnyPublisher<Void, Never>
+    let didChangeQuality: AnyPublisher<Void, Never>
     
-    init(didReceivedImage: @escaping (Data) -> Void, changeCamera: AnyPublisher<Void, Never>) {
+    init(didReceivedImage: @escaping (Data) -> Void,
+         changeCamera: AnyPublisher<Void, Never>,
+         didChangeQuality: AnyPublisher<Void, Never>) {
         self.didReceivedImage = didReceivedImage
         self.changeCamera = changeCamera
+        self.didChangeQuality = didChangeQuality
     }
     
     func makeUIView(context: Context) -> CameraViewController {
-        return CameraViewController(didReceivedImage: didReceivedImage, changeCamera: changeCamera)
+        return CameraViewController(didReceivedImage: didReceivedImage, changeCamera: changeCamera, changeQuality: didChangeQuality)
     }
     
     func updateUIView(_ uiView: CameraViewController, context: Context) {}
@@ -35,6 +39,7 @@ class CameraViewController: UIView {
     let didReceivedImage: (Data) -> Void
     
     let didChangeCamera: AnyPublisher<Void, Never>
+    let didChangeQuality: AnyPublisher<Void, Never>
     
     private let sessionQueue = DispatchQueue(label: "session queue")
     
@@ -53,9 +58,10 @@ class CameraViewController: UIView {
         return layer as! AVCaptureVideoPreviewLayer
     }
 
-    init(didReceivedImage: @escaping (Data) -> Void, changeCamera: AnyPublisher<Void, Never>) {
+    init(didReceivedImage: @escaping (Data) -> Void, changeCamera: AnyPublisher<Void, Never>, changeQuality: AnyPublisher<Void, Never>) {
         self.didReceivedImage = didReceivedImage
         self.didChangeCamera = changeCamera
+        self.didChangeQuality = changeQuality
         super.init(frame: .zero)
         setupCamera()
         setupCameraOutput()
@@ -71,7 +77,7 @@ class CameraViewController: UIView {
         do {
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
             session = AVCaptureSession()
-            session?.sessionPreset = AVCaptureSession.Preset.medium
+            session?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
             session?.addInput(deviceInput)
             self.deviceInput = deviceInput
             videoPreviewLayer.session = session
@@ -83,6 +89,10 @@ class CameraViewController: UIView {
         
         didChangeCamera
             .sink { self.switchCamera() }
+            .store(in: &disposables)
+        
+        didChangeQuality
+            .sink { self.changeQuality() }
             .store(in: &disposables)
     }
 
@@ -103,6 +113,12 @@ class CameraViewController: UIView {
         let newCameraDevice = currentInput?.device.position == .back ? getCamera(with: .front) : getCamera(with: .back)
         let newVideoInput = try? AVCaptureDeviceInput(device: newCameraDevice!)
         session?.addInput(newVideoInput!)
+        session?.commitConfiguration()
+    }
+
+    func changeQuality() {
+        session?.beginConfiguration()
+        session?.sessionPreset = .medium
         session?.commitConfiguration()
     }
 

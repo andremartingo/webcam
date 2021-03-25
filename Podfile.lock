@@ -1,0 +1,16 @@
+PODS:
+  - SwiftCompressor (0.2.1)
+
+DEPENDENCIES:
+  - SwiftCompressor
+
+SPEC REPOS:
+  trunk:
+    - SwiftCompressor
+
+SPEC CHECKSUMS:
+  SwiftCompressor: 16b8fdd7e89640c2d19f258a4dbd2aa6bfe39a43
+
+PODFILE CHECKSUM: 14052cbe1dafcbceb4da44d11c8a58cc80669428
+
+COCOAPODS: 1.10.1

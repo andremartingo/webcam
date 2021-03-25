@@ -15,18 +15,24 @@ struct CameraView: UIViewRepresentable {
     
     let didReceivedImage: (Data) -> Void
     let changeCamera: AnyPublisher<Void, Never>
-    let didChangeQuality: AnyPublisher<Void, Never>
+    let didChangeQuality: AnyPublisher<Quality, Never>
+    let didChangeCompression: AnyPublisher<Float, Never>
     
     init(didReceivedImage: @escaping (Data) -> Void,
          changeCamera: AnyPublisher<Void, Never>,
-         didChangeQuality: AnyPublisher<Void, Never>) {
+         didChangeQuality: AnyPublisher<Quality, Never>,
+         didChangeCompression: AnyPublisher<Float, Never>) {
         self.didReceivedImage = didReceivedImage
         self.changeCamera = changeCamera
         self.didChangeQuality = didChangeQuality
+        self.didChangeCompression = didChangeCompression
     }
     
     func makeUIView(context: Context) -> CameraViewController {
-        return CameraViewController(didReceivedImage: didReceivedImage, changeCamera: changeCamera, changeQuality: didChangeQuality)
+        return CameraViewController(didReceivedImage: didReceivedImage,
+                                    changeCamera: changeCamera,
+                                    changeQuality: didChangeQuality,
+                                    changeCompression: didChangeCompression)
     }
     
     func updateUIView(_ uiView: CameraViewController, context: Context) {}
@@ -39,7 +45,8 @@ class CameraViewController: UIView {
     let didReceivedImage: (Data) -> Void
     
     let didChangeCamera: AnyPublisher<Void, Never>
-    let didChangeQuality: AnyPublisher<Void, Never>
+    let didChangeQuality: AnyPublisher<Quality, Never>
+    let didChangeCompression: AnyPublisher<Float, Never>
     
     private let sessionQueue = DispatchQueue(label: "session queue")
     
@@ -57,11 +64,17 @@ class CameraViewController: UIView {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer {
         return layer as! AVCaptureVideoPreviewLayer
     }
+    
+    var compression: Float = 0
 
-    init(didReceivedImage: @escaping (Data) -> Void, changeCamera: AnyPublisher<Void, Never>, changeQuality: AnyPublisher<Void, Never>) {
+    init(didReceivedImage: @escaping (Data) -> Void,
+         changeCamera: AnyPublisher<Void, Never>,
+         changeQuality: AnyPublisher<Quality, Never>,
+         changeCompression: AnyPublisher<Float, Never>) {
         self.didReceivedImage = didReceivedImage
         self.didChangeCamera = changeCamera
         self.didChangeQuality = changeQuality
+        self.didChangeCompression = changeCompression
         super.init(frame: .zero)
         setupCamera()
         setupCameraOutput()
@@ -77,7 +90,7 @@ class CameraViewController: UIView {
         do {
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
             session = AVCaptureSession()
-            session?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
+            session?.sessionPreset = AVCaptureSession.Preset.medium
             session?.addInput(deviceInput)
             self.deviceInput = deviceInput
             videoPreviewLayer.session = session
@@ -92,7 +105,14 @@ class CameraViewController: UIView {
             .store(in: &disposables)
         
         didChangeQuality
-            .sink { self.changeQuality() }
+            .sink { self.changeQuality(quality: $0) }
+            .store(in: &disposables)
+        
+        didChangeCompression
+            .sink {
+                print($0)
+                self.compression = $0
+            }
             .store(in: &disposables)
     }
 
@@ -116,9 +136,9 @@ class CameraViewController: UIView {
         session?.commitConfiguration()
     }
 
-    func changeQuality() {
+    func changeQuality(quality: Quality) {
         session?.beginConfiguration()
-        session?.sessionPreset = .medium
+        session?.sessionPreset = quality == Quality.sd ? .medium : .hd1280x720
         session?.commitConfiguration()
     }
 
@@ -136,9 +156,13 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
 
-        if let frame = ciImage.compressed(by: 0.1) {
-            didReceivedImage(frame)
-        }
+        let frame = ciImage.compressed(by: .init(self.compression))
+        let origin = ciImage.compressed(by: 1)
+        print(">>> Uncompressed Size: \(origin?.description)")
+        print(">>> Compressed Size: \(frame?.description)")
+        
+        // Max bytes is 8K
+        didReceivedImage(frame!)
     }
 
 }

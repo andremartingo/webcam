@@ -38,18 +38,17 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     private let _changeQuality = PassthroughSubject<Quality, Never>()
     
     public var output: Bool = false
-    private let client: Client
-        
+    private let host = BonjourHost()
+    
     init() {
         self.didChangeCamera = _changeCamera.eraseToAnyPublisher()
         self.didChangeQuality = _changeQuality.eraseToAnyPublisher()
-        self.client = .init()
         setupBindings()
     }
     
     private func setupBindings() {
-        didReceivedImage.sink { [weak self] in
-            self?.client.send(frames: [$0])
+        didReceivedImage.sink { [weak self] _ in
+//            self?.client.send(frames: [$0])
         }
         .store(in: &disposables)
         

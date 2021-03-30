@@ -20,20 +20,27 @@ class ServerViewModel: ObservableObject {
     
     @Published
     var connectionState: State
-
-    let server: Server?
     
+    let client = BonjourClient()
+    private var disposables = Set<AnyCancellable>()
+
     init() {
         self.image = .init()
         self.connectionState = .notConnected
-        self.server = Server()
-        server?.didReceive = {
-            guard let image = UIImage(data: $0) else { return }
-            DispatchQueue.main.async {
-                self.connectionState = .connected
-                self.image = image.rotate(deg: 90)
-            }
-        }
+        //        self.server = Server()
+        //        server?.didReceive = {
+        //            guard let image = UIImage(data: $0) else { return }
+        //            DispatchQueue.main.async {
+        //                self.connectionState = .connected
+        //                self.image = image.rotate(deg: 90)
+        //            }
+        //        }
+        
+        client.$connected
+            .sink(receiveValue: {
+                self.connectionState = $0 ? .connected : .notConnected
+            })
+            .store(in: &disposables)
     }
 }
 
@@ -58,5 +65,5 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
-
+    
 }

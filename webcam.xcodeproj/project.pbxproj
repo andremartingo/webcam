@@ -18,8 +18,6 @@
 		30122C3D25EC46B40056CFA5 /* webcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C3C25EC46B40056CFA5 /* webcamTests.swift */; };
 		30122C4825EC46B40056CFA5 /* webcamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C4725EC46B40056CFA5 /* webcamUITests.swift */; };
 		30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */; };
-		302A972A260E4A5D00D4E55B /* BonjourHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A9729260E4A5D00D4E55B /* BonjourHost.swift */; };
-		302A973F260E4B3300D4E55B /* BonjourClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A973E260E4B3300D4E55B /* BonjourClient.swift */; };
 		3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */; };
 		304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */; };
 		30C27DEF260922B300E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DEE260922B300E69103 /* NetworkCore */; };
@@ -88,8 +86,6 @@
 		30122C4725EC46B40056CFA5 /* webcamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webcamUITests.swift; sourceTree = "<group>"; };
 		30122C4925EC46B40056CFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		302A9729260E4A5D00D4E55B /* BonjourHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourHost.swift; sourceTree = "<group>"; };
-		302A973E260E4B3300D4E55B /* BonjourClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourClient.swift; sourceTree = "<group>"; };
 		3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWireframe.swift; sourceTree = "<group>"; };
 		30865D1A260922840072D550 /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 				30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */,
 				3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */,
 				304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */,
-				302A9729260E4A5D00D4E55B /* BonjourHost.swift */,
 			);
 			path = CameraWireframe;
 			sourceTree = "<group>";
@@ -287,7 +282,6 @@
 				30D8460F25F2DB7300A402DC /* LaunchScreen.storyboard */,
 				30D8461225F2DB7300A402DC /* Info.plist */,
 				30D8460C25F2DB7300A402DC /* Preview Content */,
-				302A973E260E4B3300D4E55B /* BonjourClient.swift */,
 			);
 			path = server;
 			sourceTree = "<group>";
@@ -779,7 +773,6 @@
 			files = (
 				30122C2625EC46B20056CFA5 /* AppDelegate.swift in Sources */,
 				304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */,
-				302A972A260E4A5D00D4E55B /* BonjourHost.swift in Sources */,
 				30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */,
 				30122C2825EC46B20056CFA5 /* SceneDelegate.swift in Sources */,
 				3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */,
@@ -810,7 +803,6 @@
 				30D8460525F2DB7300A402DC /* AppDelegate.swift in Sources */,
 				30D8460725F2DB7300A402DC /* SceneDelegate.swift in Sources */,
 				30D8466725F2E0AD00A402DC /* ServerViewModel.swift in Sources */,
-				302A973F260E4B3300D4E55B /* BonjourClient.swift in Sources */,
 				30D8460925F2DB7300A402DC /* ServerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,7 +62,7 @@
 	</array>
     <key>NSBonjourServices</key>
     <array>
-    <string>_camera._udp</string>
+    <string>_webcam._tcp.</string>
     </array>
     <key>NSLocalNetworkUsageDescription</key>
     <string>Why do we use Local Network????</string>

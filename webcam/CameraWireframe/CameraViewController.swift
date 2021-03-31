@@ -158,8 +158,8 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
         let frame = ciImage.compressed(by: .init(self.compression))
         let origin = ciImage.compressed(by: 1)
-        print(">>> Uncompressed Size: \(origin?.description)")
-        print(">>> Compressed Size: \(frame?.description)")
+//        print(">>> Uncompressed Size: \(origin?.description)")
+//        print(">>> Compressed Size: \(frame?.description)")
         
         // Max bytes is 8K
         didReceivedImage(frame!)

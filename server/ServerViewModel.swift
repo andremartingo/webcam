@@ -21,22 +21,22 @@ class ServerViewModel: ObservableObject {
     @Published
     var connectionState: State
     
-    let client = BonjourClient()
+    let server = BonjourHost()
     private var disposables = Set<AnyCancellable>()
-
+    
     init() {
         self.image = .init()
         self.connectionState = .notConnected
         //        self.server = Server()
-        //        server?.didReceive = {
-        //            guard let image = UIImage(data: $0) else { return }
-        //            DispatchQueue.main.async {
-        //                self.connectionState = .connected
-        //                self.image = image.rotate(deg: 90)
-        //            }
-        //        }
+        server.didReceive = { image in
+//            guard let image = UIImage(data: $0) else { return }
+            DispatchQueue.main.async {
+                self.connectionState = .connected
+                self.image = image.rotate(deg: 90)
+            }
+        }
         
-        client.$connected
+        server.$connected
             .sink(receiveValue: {
                 self.connectionState = $0 ? .connected : .notConnected
             })

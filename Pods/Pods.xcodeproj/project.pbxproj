@@ -1,0 +1,1261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AA6FC74CA5FD0EF9C45CD0E991CACF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0C1F847861F13AC885343F161A4A1B69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		19C0F1DCAE3210356642B19FCCC0D72F /* Pods-webcamTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 630BE148DCA544D94B86AF76E7DF14C5 /* Pods-webcamTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F1EB7D6260A6481126849EDD7C24DF1 /* Pods-serverTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 104262A6868E37314F614AAA17981834 /* Pods-serverTests-dummy.m */; };
+		1F97BC0E752091EB92BBEE2323F91E07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		34CE4EE15CAA7426E0736ECAE7BA3AB3 /* Pods-webcam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F6C896CF0B50409B3FD5EDB117D456C /* Pods-webcam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35CE25ADB738E94524E6058B4B06D657 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5241F86C6BFD4CFEEF7EC694ECF3012B /* Pods-server-serverUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A58085A8AC6BFFE2BFF0BADB2E62A062 /* Pods-server-serverUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AF1D97B151A9378763A9369F47AF6D8 /* Pods-server-serverUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D8E11A8D71D7D38881E6915752459E /* Pods-server-serverUITests-dummy.m */; };
+		61AE56B326066D4A909A97137CDCB0DD /* Pods-server-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716D763B9C0DA265213DFFB494A623E /* Pods-server-dummy.m */; };
+		66CE8CDB1409C292EE74630C080852A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		720717FF405DF8DCBCEB010CC24EFA50 /* Pods-webcam-webcamUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B25D1D406590BD2FE8A4B49E45E7724 /* Pods-webcam-webcamUITests-dummy.m */; };
+		93F4A8F3BBCDB2EE7611126DCA0CAC6F /* Pods-webcam-webcamUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACCDD6C9DFE5E929B9C11E68C87C2B4A /* Pods-webcam-webcamUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF9E8C03E46CA959E623656C2A064275 /* Pods-server-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 008C753E82B71B6C395CB03DC9045DD0 /* Pods-server-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D115D702A807C0A1840C0357FA2FE32A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D60423B0C868D31E60C3F92F021421B7 /* Pods-webcamTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F991E5A63064478837448C2D82B8B46 /* Pods-webcamTests-dummy.m */; };
+		D9519A2FEE640348019BD9052839463C /* Pods-webcam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB49FBDF8DDCFDF41CC35CBBC006498 /* Pods-webcam-dummy.m */; };
+		E2B191214A6C037578350120A4BE1FB4 /* Pods-serverTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A01A3B82C46E64B16DF22C94078C18 /* Pods-serverTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67AA762E01CFF06EEEC508BE3190169D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E4D69E67BC49500DA82A76CDE73019;
+			remoteInfo = "Pods-webcam";
+		};
+		D82634F1713F192E53B2DF1986528942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4065390534B60CE65E20680C6A25D1BF;
+			remoteInfo = "Pods-server";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008C753E82B71B6C395CB03DC9045DD0 /* Pods-server-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-server-umbrella.h"; sourceTree = "<group>"; };
+		014EA9DD642719373AB738E92686F2A0 /* Pods_webcam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_webcam.framework; path = "Pods-webcam.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		073081E5E915E8B418BE65E63AB73B48 /* Pods-webcam-webcamUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-webcam-webcamUITests.modulemap"; sourceTree = "<group>"; };
+		0F991E5A63064478837448C2D82B8B46 /* Pods-webcamTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-webcamTests-dummy.m"; sourceTree = "<group>"; };
+		104262A6868E37314F614AAA17981834 /* Pods-serverTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-serverTests-dummy.m"; sourceTree = "<group>"; };
+		186C422FC18D3808F18F35D5817B5901 /* Pods-server-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-acknowledgements.plist"; sourceTree = "<group>"; };
+		1F431F66081103AC7508E810ED251FC6 /* Pods_server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_server.framework; path = "Pods-server.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2138FC467877F1EB34B85E2A5D8CA74D /* Pods-webcam-webcamUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-webcam-webcamUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3326A488FD96EBB976D5A409EFBC2BBC /* Pods-server-serverUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-server-serverUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		39112A41C6ADDFF4218D7ECEB0E62F9E /* Pods-server-serverUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-serverUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3993ABD2E9A082041325DEA08A78669B /* Pods-server-serverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server-serverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3B25D1D406590BD2FE8A4B49E45E7724 /* Pods-webcam-webcamUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-webcam-webcamUITests-dummy.m"; sourceTree = "<group>"; };
+		3BDA0202CDFB8FA6993DFE3937313F25 /* Pods-webcam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcam.debug.xcconfig"; sourceTree = "<group>"; };
+		3EA66CF786CE16733164C7E5FA76BBAD /* Pods_webcamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_webcamTests.framework; path = "Pods-webcamTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462AE004810EF407FC974572CE9A7F2B /* Pods-webcamTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-webcamTests.modulemap"; sourceTree = "<group>"; };
+		47D8E11A8D71D7D38881E6915752459E /* Pods-server-serverUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-server-serverUITests-dummy.m"; sourceTree = "<group>"; };
+		4B18848457DBEB55C9F92531AB63B71F /* Pods-serverTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-serverTests.modulemap"; sourceTree = "<group>"; };
+		4C8C377D99250FB3CF6DC90946D1FD41 /* Pods-webcamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57CA285080B9439D617713DFD867459B /* Pods-server-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-server-acknowledgements.markdown"; sourceTree = "<group>"; };
+		58E8EBAE2CB7A0EC5BE77E4553482A02 /* Pods-webcamTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcamTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D50BB0E2FF5BF693FCDCF735108789D /* Pods_webcam_webcamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_webcam_webcamUITests.framework; path = "Pods-webcam-webcamUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5640DE4047EDCE0357344285FD18EC /* Pods-server.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-server.modulemap"; sourceTree = "<group>"; };
+		630BE148DCA544D94B86AF76E7DF14C5 /* Pods-webcamTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-webcamTests-umbrella.h"; sourceTree = "<group>"; };
+		6CB571560E81B17D5562A864C9E37F7A /* Pods-server-serverUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-serverUITests-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		730650BFF61BE0FD87B6BB29AAED6DAC /* Pods-webcam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-webcam.modulemap"; sourceTree = "<group>"; };
+		7C6211ADAE815694D582E403596CD366 /* Pods-webcam-webcamUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcam-webcamUITests-Info.plist"; sourceTree = "<group>"; };
+		7ECF082F2EC41784481B471A62AC4479 /* Pods-webcam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcam-acknowledgements.plist"; sourceTree = "<group>"; };
+		8188DAE88D0E053196BF80E9BDE9CC2B /* Pods-webcam-webcamUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcam-webcamUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		84D8A3CDB4CFE2738EAE53F24776BAC8 /* Pods-webcamTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-webcamTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8716D763B9C0DA265213DFFB494A623E /* Pods-server-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-server-dummy.m"; sourceTree = "<group>"; };
+		8F6C896CF0B50409B3FD5EDB117D456C /* Pods-webcam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-webcam-umbrella.h"; sourceTree = "<group>"; };
+		94A01A3B82C46E64B16DF22C94078C18 /* Pods-serverTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-serverTests-umbrella.h"; sourceTree = "<group>"; };
+		966EC8925003BC6D9D309C669D4B68E7 /* Pods_serverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_serverTests.framework; path = "Pods-serverTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E2E452F30C01C9909A6F4297C61667 /* Pods-webcam-webcamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcam-webcamUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99B6FFD2E8368709DC551AD7D610942F /* Pods-serverTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-serverTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E5692E58094DFDF1E13DADBD5F48482 /* Pods-serverTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-serverTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A0DD52B884963BAF559F1DE9916E6057 /* Pods-webcam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcam.release.xcconfig"; sourceTree = "<group>"; };
+		A58085A8AC6BFFE2BFF0BADB2E62A062 /* Pods-server-serverUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-server-serverUITests-umbrella.h"; sourceTree = "<group>"; };
+		A8B362591C2E0467D3CECBBA925C61AC /* Pods-server-serverUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-server-serverUITests.modulemap"; sourceTree = "<group>"; };
+		AA73D694C59183FCCA7A79DF5CA5FFEA /* Pods_server_serverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_server_serverUITests.framework; path = "Pods-server-serverUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCDD6C9DFE5E929B9C11E68C87C2B4A /* Pods-webcam-webcamUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-webcam-webcamUITests-umbrella.h"; sourceTree = "<group>"; };
+		AFBA54A7BD0B9A09C86A8CFD2E4F5F81 /* Pods-webcamTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcamTests-Info.plist"; sourceTree = "<group>"; };
+		BDB49FBDF8DDCFDF41CC35CBBC006498 /* Pods-webcam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-webcam-dummy.m"; sourceTree = "<group>"; };
+		C1F2BBD7EC3365C2DDB4E5577E931393 /* Pods-server-serverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server-serverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2C92B85F00DFB4A3C989AAB4032AEF3 /* Pods-webcam-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-webcam-Info.plist"; sourceTree = "<group>"; };
+		C349CF5A4F29CEC5A76FA597B25169DD /* Pods-serverTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-serverTests-Info.plist"; sourceTree = "<group>"; };
+		C691FD4A339ABB04258FB4A7C90F4DE1 /* Pods-serverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-serverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C75BA8F22F6108A28BA8C6130A719084 /* Pods-webcam-webcamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcam-webcamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC38B519C4C45FF7D86F79400B37D6E9 /* Pods-server-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-Info.plist"; sourceTree = "<group>"; };
+		CF773EA754F0D8343BA4F5F000747928 /* Pods-webcamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-webcamTests.release.xcconfig"; sourceTree = "<group>"; };
+		DAF645F2AD491394A1C48E771A1893D3 /* Pods-serverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-serverTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBBBF809E8824974009713543AB65EB3 /* Pods-server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.debug.xcconfig"; sourceTree = "<group>"; };
+		E55B1D8D5A94F185065734AF6C122E4C /* Pods-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.release.xcconfig"; sourceTree = "<group>"; };
+		EFB0E3EB375F62EA83606E70A27C711C /* Pods-webcam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-webcam-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		262F3C23DB061896C8E69F9EDE91E2D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35CE25ADB738E94524E6058B4B06D657 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		830CE480F5AA459F4EDA64936CDF4C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D115D702A807C0A1840C0357FA2FE32A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83670E5EE4ADC434F24BE62DADC2E76A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1F847861F13AC885343F161A4A1B69 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8853E5E73D081F185A20C6449B4BB4D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66CE8CDB1409C292EE74630C080852A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C42FD06F9DFF8770C0D575A1B15D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F97BC0E752091EB92BBEE2323F91E07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25F2F5584762A604A07E01825874FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA6FC74CA5FD0EF9C45CD0E991CACF6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1975DE22BE9BC062973256EAEC80D228 /* Pods-server-serverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8B362591C2E0467D3CECBBA925C61AC /* Pods-server-serverUITests.modulemap */,
+				3326A488FD96EBB976D5A409EFBC2BBC /* Pods-server-serverUITests-acknowledgements.markdown */,
+				39112A41C6ADDFF4218D7ECEB0E62F9E /* Pods-server-serverUITests-acknowledgements.plist */,
+				47D8E11A8D71D7D38881E6915752459E /* Pods-server-serverUITests-dummy.m */,
+				6CB571560E81B17D5562A864C9E37F7A /* Pods-server-serverUITests-Info.plist */,
+				A58085A8AC6BFFE2BFF0BADB2E62A062 /* Pods-server-serverUITests-umbrella.h */,
+				C1F2BBD7EC3365C2DDB4E5577E931393 /* Pods-server-serverUITests.debug.xcconfig */,
+				3993ABD2E9A082041325DEA08A78669B /* Pods-server-serverUITests.release.xcconfig */,
+			);
+			name = "Pods-server-serverUITests";
+			path = "Target Support Files/Pods-server-serverUITests";
+			sourceTree = "<group>";
+		};
+		3540723E3DC06BD116A5BA1389BD8840 /* Pods-webcam-webcamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				073081E5E915E8B418BE65E63AB73B48 /* Pods-webcam-webcamUITests.modulemap */,
+				2138FC467877F1EB34B85E2A5D8CA74D /* Pods-webcam-webcamUITests-acknowledgements.markdown */,
+				8188DAE88D0E053196BF80E9BDE9CC2B /* Pods-webcam-webcamUITests-acknowledgements.plist */,
+				3B25D1D406590BD2FE8A4B49E45E7724 /* Pods-webcam-webcamUITests-dummy.m */,
+				7C6211ADAE815694D582E403596CD366 /* Pods-webcam-webcamUITests-Info.plist */,
+				ACCDD6C9DFE5E929B9C11E68C87C2B4A /* Pods-webcam-webcamUITests-umbrella.h */,
+				C75BA8F22F6108A28BA8C6130A719084 /* Pods-webcam-webcamUITests.debug.xcconfig */,
+				97E2E452F30C01C9909A6F4297C61667 /* Pods-webcam-webcamUITests.release.xcconfig */,
+			);
+			name = "Pods-webcam-webcamUITests";
+			path = "Target Support Files/Pods-webcam-webcamUITests";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6B2B2B3B554F4F83717FB189B01E5ED1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8661CF84DB4840E53CB6D7D4F96A5593 /* Pods-server */,
+				1975DE22BE9BC062973256EAEC80D228 /* Pods-server-serverUITests */,
+				AF50F7F2C99C18DB8B2C93615B7585D3 /* Pods-serverTests */,
+				8572ADD1E45981E2293503D1A0E71E96 /* Pods-webcam */,
+				3540723E3DC06BD116A5BA1389BD8840 /* Pods-webcam-webcamUITests */,
+				E3E5E8B4E6C40479A9EC84A1E5E59706 /* Pods-webcamTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8572ADD1E45981E2293503D1A0E71E96 /* Pods-webcam */ = {
+			isa = PBXGroup;
+			children = (
+				730650BFF61BE0FD87B6BB29AAED6DAC /* Pods-webcam.modulemap */,
+				EFB0E3EB375F62EA83606E70A27C711C /* Pods-webcam-acknowledgements.markdown */,
+				7ECF082F2EC41784481B471A62AC4479 /* Pods-webcam-acknowledgements.plist */,
+				BDB49FBDF8DDCFDF41CC35CBBC006498 /* Pods-webcam-dummy.m */,
+				C2C92B85F00DFB4A3C989AAB4032AEF3 /* Pods-webcam-Info.plist */,
+				8F6C896CF0B50409B3FD5EDB117D456C /* Pods-webcam-umbrella.h */,
+				3BDA0202CDFB8FA6993DFE3937313F25 /* Pods-webcam.debug.xcconfig */,
+				A0DD52B884963BAF559F1DE9916E6057 /* Pods-webcam.release.xcconfig */,
+			);
+			name = "Pods-webcam";
+			path = "Target Support Files/Pods-webcam";
+			sourceTree = "<group>";
+		};
+		8661CF84DB4840E53CB6D7D4F96A5593 /* Pods-server */ = {
+			isa = PBXGroup;
+			children = (
+				5F5640DE4047EDCE0357344285FD18EC /* Pods-server.modulemap */,
+				57CA285080B9439D617713DFD867459B /* Pods-server-acknowledgements.markdown */,
+				186C422FC18D3808F18F35D5817B5901 /* Pods-server-acknowledgements.plist */,
+				8716D763B9C0DA265213DFFB494A623E /* Pods-server-dummy.m */,
+				CC38B519C4C45FF7D86F79400B37D6E9 /* Pods-server-Info.plist */,
+				008C753E82B71B6C395CB03DC9045DD0 /* Pods-server-umbrella.h */,
+				DBBBF809E8824974009713543AB65EB3 /* Pods-server.debug.xcconfig */,
+				E55B1D8D5A94F185065734AF6C122E4C /* Pods-server.release.xcconfig */,
+			);
+			name = "Pods-server";
+			path = "Target Support Files/Pods-server";
+			sourceTree = "<group>";
+		};
+		AF50F7F2C99C18DB8B2C93615B7585D3 /* Pods-serverTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B18848457DBEB55C9F92531AB63B71F /* Pods-serverTests.modulemap */,
+				99B6FFD2E8368709DC551AD7D610942F /* Pods-serverTests-acknowledgements.markdown */,
+				9E5692E58094DFDF1E13DADBD5F48482 /* Pods-serverTests-acknowledgements.plist */,
+				104262A6868E37314F614AAA17981834 /* Pods-serverTests-dummy.m */,
+				C349CF5A4F29CEC5A76FA597B25169DD /* Pods-serverTests-Info.plist */,
+				94A01A3B82C46E64B16DF22C94078C18 /* Pods-serverTests-umbrella.h */,
+				C691FD4A339ABB04258FB4A7C90F4DE1 /* Pods-serverTests.debug.xcconfig */,
+				DAF645F2AD491394A1C48E771A1893D3 /* Pods-serverTests.release.xcconfig */,
+			);
+			name = "Pods-serverTests";
+			path = "Target Support Files/Pods-serverTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				F3C74333E015A0709C243AE8BD10F2F2 /* Products */,
+				6B2B2B3B554F4F83717FB189B01E5ED1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3E5E8B4E6C40479A9EC84A1E5E59706 /* Pods-webcamTests */ = {
+			isa = PBXGroup;
+			children = (
+				462AE004810EF407FC974572CE9A7F2B /* Pods-webcamTests.modulemap */,
+				84D8A3CDB4CFE2738EAE53F24776BAC8 /* Pods-webcamTests-acknowledgements.markdown */,
+				58E8EBAE2CB7A0EC5BE77E4553482A02 /* Pods-webcamTests-acknowledgements.plist */,
+				0F991E5A63064478837448C2D82B8B46 /* Pods-webcamTests-dummy.m */,
+				AFBA54A7BD0B9A09C86A8CFD2E4F5F81 /* Pods-webcamTests-Info.plist */,
+				630BE148DCA544D94B86AF76E7DF14C5 /* Pods-webcamTests-umbrella.h */,
+				4C8C377D99250FB3CF6DC90946D1FD41 /* Pods-webcamTests.debug.xcconfig */,
+				CF773EA754F0D8343BA4F5F000747928 /* Pods-webcamTests.release.xcconfig */,
+			);
+			name = "Pods-webcamTests";
+			path = "Target Support Files/Pods-webcamTests";
+			sourceTree = "<group>";
+		};
+		F3C74333E015A0709C243AE8BD10F2F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F431F66081103AC7508E810ED251FC6 /* Pods_server.framework */,
+				AA73D694C59183FCCA7A79DF5CA5FFEA /* Pods_server_serverUITests.framework */,
+				966EC8925003BC6D9D309C669D4B68E7 /* Pods_serverTests.framework */,
+				014EA9DD642719373AB738E92686F2A0 /* Pods_webcam.framework */,
+				5D50BB0E2FF5BF693FCDCF735108789D /* Pods_webcam_webcamUITests.framework */,
+				3EA66CF786CE16733164C7E5FA76BBAD /* Pods_webcamTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09D34D50EF122A883D87CFDA62EED4AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CE4EE15CAA7426E0736ECAE7BA3AB3 /* Pods-webcam-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		966C2F880F9877D0797120D1FDB04E9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F4A8F3BBCDB2EE7611126DCA0CAC6F /* Pods-webcam-webcamUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B52366FDA9825F17F0FD6C0EFDEBBBE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B191214A6C037578350120A4BE1FB4 /* Pods-serverTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0B37FBDD62C9F90DC9CFBD15B4B2264 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9E8C03E46CA959E623656C2A064275 /* Pods-server-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0FF8722F79515CFE2C240B94DE83ED6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C0F1DCAE3210356642B19FCCC0D72F /* Pods-webcamTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E90F0BA83BB05222401CFFCA144188C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5241F86C6BFD4CFEEF7EC694ECF3012B /* Pods-server-serverUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4065390534B60CE65E20680C6A25D1BF /* Pods-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AE320C6294376C1AD3E6EA9D4F74A31 /* Build configuration list for PBXNativeTarget "Pods-server" */;
+			buildPhases = (
+				D0B37FBDD62C9F90DC9CFBD15B4B2264 /* Headers */,
+				C511ADDB264C50A8378A36664A83BB1F /* Sources */,
+				262F3C23DB061896C8E69F9EDE91E2D7 /* Frameworks */,
+				ED8340BC2DBC3FEB8406B5C969007662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-server";
+			productName = "Pods-server";
+			productReference = 1F431F66081103AC7508E810ED251FC6 /* Pods_server.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91E10FACE9422D91BD03ADDC628E7EC0 /* Pods-webcamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B8248B416160896F5CA9AC215BDEA0 /* Build configuration list for PBXNativeTarget "Pods-webcamTests" */;
+			buildPhases = (
+				D0FF8722F79515CFE2C240B94DE83ED6 /* Headers */,
+				1E9A596FC5CF15CB40D21D94CFDEE066 /* Sources */,
+				83670E5EE4ADC434F24BE62DADC2E76A /* Frameworks */,
+				FB5ACFB48FF3C71C4F1976569DDCB52A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C9545BAE6D8449701BB1EBE0FEC80C2 /* PBXTargetDependency */,
+			);
+			name = "Pods-webcamTests";
+			productName = "Pods-webcamTests";
+			productReference = 3EA66CF786CE16733164C7E5FA76BBAD /* Pods_webcamTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A321D8C667060DF56714EB703B241F4F /* Pods-webcam-webcamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F2A32AA2E24AED5F1804F5578A50095 /* Build configuration list for PBXNativeTarget "Pods-webcam-webcamUITests" */;
+			buildPhases = (
+				966C2F880F9877D0797120D1FDB04E9B /* Headers */,
+				F33F8E0F6C7252CAD9D44896F7B240BC /* Sources */,
+				E7C42FD06F9DFF8770C0D575A1B15D34 /* Frameworks */,
+				3EBA251007876AB9B6619DC066A7F631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-webcam-webcamUITests";
+			productName = "Pods-webcam-webcamUITests";
+			productReference = 5D50BB0E2FF5BF693FCDCF735108789D /* Pods_webcam_webcamUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA193631B1702AB004FEE9DBF018194E /* Pods-server-serverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843BF8466A0798EF8A0CF384362CBC05 /* Build configuration list for PBXNativeTarget "Pods-server-serverUITests" */;
+			buildPhases = (
+				E90F0BA83BB05222401CFFCA144188C1 /* Headers */,
+				EF682B5059822E49BA17B2D57B44A045 /* Sources */,
+				F25F2F5584762A604A07E01825874FF7 /* Frameworks */,
+				0E1F5C06A392D7958FBA2E0FF38659AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-server-serverUITests";
+			productName = "Pods-server-serverUITests";
+			productReference = AA73D694C59183FCCA7A79DF5CA5FFEA /* Pods_server_serverUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F0E303021A2A0413FF453F924AE472E9 /* Pods-serverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD11C271C297E1A459AED0750D79FA6B /* Build configuration list for PBXNativeTarget "Pods-serverTests" */;
+			buildPhases = (
+				B52366FDA9825F17F0FD6C0EFDEBBBE0 /* Headers */,
+				A59E119980287A8A6B1AECBDE90A733A /* Sources */,
+				830CE480F5AA459F4EDA64936CDF4C94 /* Frameworks */,
+				E1094F8DB464EC69DC57CA41D5AA7BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D855D30977FADBFB0AADE0DDB750B88D /* PBXTargetDependency */,
+			);
+			name = "Pods-serverTests";
+			productName = "Pods-serverTests";
+			productReference = 966EC8925003BC6D9D309C669D4B68E7 /* Pods_serverTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7E4D69E67BC49500DA82A76CDE73019 /* Pods-webcam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7494AB04EF1BCF3A2AF7E848A261E462 /* Build configuration list for PBXNativeTarget "Pods-webcam" */;
+			buildPhases = (
+				09D34D50EF122A883D87CFDA62EED4AB /* Headers */,
+				EA1A9BA705E97DA974DFB4E3DF01D202 /* Sources */,
+				8853E5E73D081F185A20C6449B4BB4D4 /* Frameworks */,
+				00809C2BF9F1DE00C09A459F864ED3F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-webcam";
+			productName = "Pods-webcam";
+			productReference = 014EA9DD642719373AB738E92686F2A0 /* Pods_webcam.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F3C74333E015A0709C243AE8BD10F2F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4065390534B60CE65E20680C6A25D1BF /* Pods-server */,
+				EA193631B1702AB004FEE9DBF018194E /* Pods-server-serverUITests */,
+				F0E303021A2A0413FF453F924AE472E9 /* Pods-serverTests */,
+				F7E4D69E67BC49500DA82A76CDE73019 /* Pods-webcam */,
+				A321D8C667060DF56714EB703B241F4F /* Pods-webcam-webcamUITests */,
+				91E10FACE9422D91BD03ADDC628E7EC0 /* Pods-webcamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00809C2BF9F1DE00C09A459F864ED3F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E1F5C06A392D7958FBA2E0FF38659AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EBA251007876AB9B6619DC066A7F631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1094F8DB464EC69DC57CA41D5AA7BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED8340BC2DBC3FEB8406B5C969007662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB5ACFB48FF3C71C4F1976569DDCB52A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E9A596FC5CF15CB40D21D94CFDEE066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60423B0C868D31E60C3F92F021421B7 /* Pods-webcamTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A59E119980287A8A6B1AECBDE90A733A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1EB7D6260A6481126849EDD7C24DF1 /* Pods-serverTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C511ADDB264C50A8378A36664A83BB1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AE56B326066D4A909A97137CDCB0DD /* Pods-server-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1A9BA705E97DA974DFB4E3DF01D202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9519A2FEE640348019BD9052839463C /* Pods-webcam-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF682B5059822E49BA17B2D57B44A045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AF1D97B151A9378763A9369F47AF6D8 /* Pods-server-serverUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33F8E0F6C7252CAD9D44896F7B240BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				720717FF405DF8DCBCEB010CC24EFA50 /* Pods-webcam-webcamUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C9545BAE6D8449701BB1EBE0FEC80C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-webcam";
+			target = F7E4D69E67BC49500DA82A76CDE73019 /* Pods-webcam */;
+			targetProxy = 67AA762E01CFF06EEEC508BE3190169D /* PBXContainerItemProxy */;
+		};
+		D855D30977FADBFB0AADE0DDB750B88D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-server";
+			target = 4065390534B60CE65E20680C6A25D1BF /* Pods-server */;
+			targetProxy = D82634F1713F192E53B2DF1986528942 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16749041E2D5D6079D0881BEB5A05CF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3993ABD2E9A082041325DEA08A78669B /* Pods-server-serverUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-server-serverUITests/Pods-server-serverUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-server-serverUITests/Pods-server-serverUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1C5BF4C6B819B8150C9464473D7943EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0DD52B884963BAF559F1DE9916E6057 /* Pods-webcam.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcam/Pods-webcam-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcam/Pods-webcam.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CEEDEB9FCD4D778478388472599FC03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF773EA754F0D8343BA4F5F000747928 /* Pods-webcamTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcamTests/Pods-webcamTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcamTests/Pods-webcamTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3EE0A31CC1D1EC9B3131EC6B7D23102A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C691FD4A339ABB04258FB4A7C90F4DE1 /* Pods-serverTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-serverTests/Pods-serverTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-serverTests/Pods-serverTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A3ED63B864B6140932A84FBBC4CF8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E2E452F30C01C9909A6F4297C61667 /* Pods-webcam-webcamUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcam-webcamUITests/Pods-webcam-webcamUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcam-webcamUITests/Pods-webcam-webcamUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4BDE3C8725CDAFDF6777432E4254B6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75BA8F22F6108A28BA8C6130A719084 /* Pods-webcam-webcamUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcam-webcamUITests/Pods-webcam-webcamUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcam-webcamUITests/Pods-webcam-webcamUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71AF633E99CE3B706786784C716864CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55B1D8D5A94F185065734AF6C122E4C /* Pods-server.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-server/Pods-server-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-server/Pods-server.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		72FCEBE3ADA5A80E28E0D506B4183128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDA0202CDFB8FA6993DFE3937313F25 /* Pods-webcam.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcam/Pods-webcam-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcam/Pods-webcam.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D64ECBF5B9167E6B8D18D9ACF1234A85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBBF809E8824974009713543AB65EB3 /* Pods-server.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-server/Pods-server-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-server/Pods-server.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA9DAE78D9EA208B557213FF16DD2E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C8C377D99250FB3CF6DC90946D1FD41 /* Pods-webcamTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-webcamTests/Pods-webcamTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-webcamTests/Pods-webcamTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0C004AC94E01AD981A115B9004A585A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1F2BBD7EC3365C2DDB4E5577E931393 /* Pods-server-serverUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-server-serverUITests/Pods-server-serverUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-server-serverUITests/Pods-server-serverUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E953C67DF04069E035AF79FAABE95486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF645F2AD491394A1C48E771A1893D3 /* Pods-serverTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-serverTests/Pods-serverTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-serverTests/Pods-serverTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AE320C6294376C1AD3E6EA9D4F74A31 /* Build configuration list for PBXNativeTarget "Pods-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D64ECBF5B9167E6B8D18D9ACF1234A85 /* Debug */,
+				71AF633E99CE3B706786784C716864CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7494AB04EF1BCF3A2AF7E848A261E462 /* Build configuration list for PBXNativeTarget "Pods-webcam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72FCEBE3ADA5A80E28E0D506B4183128 /* Debug */,
+				1C5BF4C6B819B8150C9464473D7943EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F2A32AA2E24AED5F1804F5578A50095 /* Build configuration list for PBXNativeTarget "Pods-webcam-webcamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BDE3C8725CDAFDF6777432E4254B6B7 /* Debug */,
+				4A3ED63B864B6140932A84FBBC4CF8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843BF8466A0798EF8A0CF384362CBC05 /* Build configuration list for PBXNativeTarget "Pods-server-serverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0C004AC94E01AD981A115B9004A585A /* Debug */,
+				16749041E2D5D6079D0881BEB5A05CF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99B8248B416160896F5CA9AC215BDEA0 /* Build configuration list for PBXNativeTarget "Pods-webcamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9DAE78D9EA208B557213FF16DD2E5D /* Debug */,
+				2CEEDEB9FCD4D778478388472599FC03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD11C271C297E1A459AED0750D79FA6B /* Build configuration list for PBXNativeTarget "Pods-serverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EE0A31CC1D1EC9B3131EC6B7D23102A /* Debug */,
+				E953C67DF04069E035AF79FAABE95486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

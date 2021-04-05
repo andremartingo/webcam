@@ -7,82 +7,72 @@
 
 import Foundation
 import Network
+import os.log
 
-public class Client {
-    private var connection: NWConnection
-    private var queue: DispatchQueue
-
-    public init() {
-        queue = DispatchQueue(label: "Client Queue")
-        // Create connection
-        connection = NWConnection(to: .service(name: Constants.serverName,
-                                               type: Constants.serviceType,
-                                               domain: Constants.domain,
-                                               interface: nil),
-                                  using: .udp)
-        // To increase the size of a UDP packet ?
-        if let ipOptions = connection.parameters.defaultProtocolStack.internetProtocol as? NWProtocolIP.Options {
-            ipOptions.version = .v6
-            ipOptions.useMinimumMTU = false
-        }
-        // Set the state update handler
-        connection.stateUpdateHandler = { [weak self] newState in
-            switch newState {
-            case .ready:
-                print("Client ready")
-                // Send the initial frame
-                self?.sendInitialFrame()
-            case .setup:
-                print("Client setup")
-            case .preparing:
-                print("Client preparing")
-            case .waiting(let error):
-                print("Client waiting error ", error)
-            case .cancelled:
-                print("Client cancelled")
-            case .failed(let error):
-                print("Client failed error ", error)
-            @unknown default:
-                break
-            }
-        }
-        // Start the connection
-        connection.start(queue: queue)
-    }
-
-    private func sendInitialFrame() {
-        let helloMessage = "hello".data(using: .utf8)
-
-        connection.send(content: helloMessage, completion: .contentProcessed({ error in
-            if let error = error {
-                print("Client send initial frame error ", error)
-            }
-        }))
-
-        connection.receiveMessage { (content, context, isComplete, error) in
-            if let _ = content {
-                print("Got connected!")
-            }
-        }
-    }
-
-    // Send frames from the camera to the other device
-    public func send(frames: [Data]) {
-        // Better to have such context ?
-        let ipMetadata = NWProtocolIP.Metadata()
-        ipMetadata.serviceClass = .interactiveVideo
-        let context = NWConnection.ContentContext(identifier: "InteractiveVideo", metadata: [ ipMetadata ])
-
-        connection.batch {
-            for frame in frames {
-                connection.send(content: frame, contentContext: context, completion: .contentProcessed({ (error) in
-                    if let error = error {
-                        print("Client send frames error ", error)
-                    }
-                }))
-            }
-        }
-    }
-
+public func log(_ message: String) {
+    let log = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "WEBCAM")
+    os_log(">>> %@", log: log, type: .debug, message)
 }
 
+public class Client {
+
+    let browser = Browser()
+
+    public var connection: Connection?
+    
+    @Published
+    public var connected: Bool = false
+    
+    public var didReceive: ((Data) -> Void)? {
+        didSet {
+            connection?.didReceive = didReceive
+        }
+    }
+    
+    public init() {}
+
+    public func send() {
+        if let connection = connection {
+//            connection.send("super message from the server! \(Int(Date().timeIntervalSince1970))")
+        }
+    }
+    
+    public func start() {
+        browser.start { [weak self] result in
+            guard let self = self,
+                  self.connection == nil else { return }
+            log("client.handler result: \(result)")
+            self.connection = Connection(endpoint: result.endpoint)
+            self.connected = true
+        }
+    }
+}
+
+import Foundation
+import Network
+
+class Browser {
+
+    let browser: NWBrowser
+
+    init() {
+        let parameters = NWParameters()
+        parameters.includePeerToPeer = true
+
+        browser = NWBrowser(for: .bonjour(type: Constants.serviceType, domain: nil), using: parameters)
+    }
+
+    func start(handler: @escaping (NWBrowser.Result) -> Void) {
+        browser.stateUpdateHandler = { newState in
+            log("browser.stateUpdateHandler \(newState)")
+        }
+        browser.browseResultsChangedHandler = { results, changes in
+            for result in results {
+                if case NWEndpoint.service = result.endpoint {
+                    handler(result)
+                }
+            }
+        }
+        browser.start(queue: .main)
+    }
+}

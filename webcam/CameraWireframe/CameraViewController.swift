@@ -88,6 +88,7 @@ class CameraViewController: UIView {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
 
         do {
+//            captureDevice.configureDesiredFrameRate(10)
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
             session = AVCaptureSession()
             session?.sessionPreset = AVCaptureSession.Preset.medium
@@ -158,8 +159,8 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 
         let frame = ciImage.compressed(by: .init(self.compression))
         let origin = ciImage.compressed(by: 1)
-        print(">>> Uncompressed Size: \(origin?.description)")
-        print(">>> Compressed Size: \(frame?.description)")
+//        print(">>> Uncompressed Size: \(origin?.description)")
+//        print(">>> Compressed Size: \(frame?.description)")
         
         // Max bytes is 8K
         didReceivedImage(frame!)
@@ -176,6 +177,116 @@ extension CIImage {
     func compressed(by factor: CGFloat) -> Data? {
         let context = CIContext()
         let cgImage = context.createCGImage(self, from: self.extent)!
-        return UIImage(cgImage: cgImage).jpegData(compressionQuality: factor)
+        let image = UIImage(cgImage: cgImage)
+        return image.jpegData(compressionQuality: factor)
+//        do {
+//            return try image.heicData(compressionQuality: factor)
+//        } catch {
+//            print("Error creating HEIC data: \(error.localizedDescription)")
+//            return nil
+//        }
+    }
+}
+
+extension UIImage {
+  enum HEICError: Error {
+    case heicNotSupported
+    case cgImageMissing
+    case couldNotFinalize
+  }
+  
+  func heicData(compressionQuality: CGFloat) throws -> Data {
+    let data = NSMutableData()
+    guard let imageDestination =
+      CGImageDestinationCreateWithData(
+        data, AVFileType.heic as CFString, 1, nil
+      )
+      else {
+        throw HEICError.heicNotSupported
+    }
+    
+    guard let cgImage = self.cgImage else {
+      throw HEICError.cgImageMissing
+    }
+    
+    let options: NSDictionary = [
+      kCGImageDestinationLossyCompressionQuality: compressionQuality
+    ]
+    
+    CGImageDestinationAddImage(imageDestination, cgImage, options)
+    guard CGImageDestinationFinalize(imageDestination) else {
+      throw HEICError.couldNotFinalize
+    }
+    
+    return data as Data
+  }
+}
+
+extension AVCaptureDevice {
+
+    /// http://stackoverflow.com/questions/21612191/set-a-custom-avframeraterange-for-an-avcapturesession#27566730
+    func configureDesiredFrameRate(_ desiredFrameRate: Int) {
+
+        var isFPSSupported = false
+
+        do {
+
+            if let videoSupportedFrameRateRanges = activeFormat.videoSupportedFrameRateRanges as? [AVFrameRateRange] {
+                for range in videoSupportedFrameRateRanges {
+                    if (range.maxFrameRate >= Double(desiredFrameRate) && range.minFrameRate <= Double(desiredFrameRate)) {
+                        isFPSSupported = true
+                        break
+                    }
+                }
+            }
+
+            if isFPSSupported {
+                try lockForConfiguration()
+                activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: Int32(desiredFrameRate))
+                activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: Int32(desiredFrameRate))
+                unlockForConfiguration()
+            }
+
+        } catch {
+            print("lockForConfiguration error: \(error.localizedDescription)")
+        }
+    }
+
+}
+
+extension UIImage {
+    var topHalf: UIImage? {
+        guard let image = cgImage?
+            .cropping(to: CGRect(origin: .zero,
+                    size: CGSize(width: size.width,
+                                 height: size.height / 2 )))
+        else { return nil }
+        return UIImage(cgImage: image, scale: 1, orientation: imageOrientation)
+    }
+    var bottomHalf: UIImage? {
+        guard let image = cgImage?
+            .cropping(to: CGRect(origin: CGPoint(x: 0,
+                                                 y: size.height - (size.height/2).rounded()),
+                                 size: CGSize(width: size.width,
+                                              height: size.height -
+                                                      (size.height/2).rounded())))
+        else { return nil }
+        return UIImage(cgImage: image)
+    }
+    var leftHalf: UIImage? {
+        guard let image = cgImage?
+            .cropping(to: CGRect(origin: .zero,
+                                 size: CGSize(width: size.width/2,
+                                              height: size.height)))
+        else { return nil }
+        return UIImage(cgImage: image)
+    }
+    var rightHalf: UIImage? {
+        guard let image = cgImage?
+            .cropping(to: CGRect(origin: CGPoint(x: size.width - (size.width/2).rounded(), y: 0),
+                                 size: CGSize(width: size.width - (size.width/2).rounded(),
+                                              height: size.height)))
+        else { return nil }
+        return UIImage(cgImage: image)
     }
 }

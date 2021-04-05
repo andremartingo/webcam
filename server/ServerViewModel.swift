@@ -21,19 +21,30 @@ class ServerViewModel: ObservableObject {
     @Published
     var connectionState: State
 
-    let server: Server?
+    let client: Client?
+    
+    private var disposables = Set<AnyCancellable>()
     
     init() {
         self.image = .init()
         self.connectionState = .notConnected
-        self.server = Server()
-        server?.didReceive = {
-            guard let image = UIImage(data: $0) else { return }
-            DispatchQueue.main.async {
-                self.connectionState = .connected
-                self.image = image.rotate(deg: 90)
+        self.client = try? Client()
+        client?.start()
+        client?.$connected
+            .receive(on: DispatchQueue.main)
+            .sink {
+                self.connectionState = $0 ? .connected : .notConnected
+                self.client?.connection?.didReceive = {
+                    guard let image = UIImage(data: $0) else {
+                        return log("Couldn't create image")
+                    }
+                    DispatchQueue.main.async {
+                        self.connectionState = .connected
+                        self.image = image.rotate(deg: 90)
+                    }
+                }
             }
-        }
+            .store(in: &disposables)
     }
 }
 

@@ -64,6 +64,10 @@
     <array>
     <string>_camera._udp</string>
     </array>
+    <key>NSBonjourServices</key>
+    <array>
+    <string>_camera._tcp</string>
+    </array>
     <key>NSLocalNetworkUsageDescription</key>
     <string>Why do we use Local Network????</string>
 </dict>

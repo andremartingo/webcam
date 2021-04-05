@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 import NetworkCore
 
 protocol CameraViewModelProtocol {
@@ -21,7 +22,7 @@ enum Quality: Int {
 class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     
     private var disposables = Set<AnyCancellable>()
-
+    
     @Published
     private(set) var didReceivedImage = PassthroughSubject<Data, Never>()
     
@@ -33,25 +34,31 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     
     let didChangeCamera: AnyPublisher<Void, Never>
     private let _changeCamera = PassthroughSubject<Void, Never>()
-
+    
     let didChangeQuality: AnyPublisher<Quality, Never>
     private let _changeQuality = PassthroughSubject<Quality, Never>()
     
     public var output: Bool = false
-    private let client: Client
-        
+    private let server: Server?
+    private var timer: Timer?
+    private let images = [UIImage(named: "balance-light")!, UIImage(named: "cardColor-light")!]
     init() {
         self.didChangeCamera = _changeCamera.eraseToAnyPublisher()
         self.didChangeQuality = _changeQuality.eraseToAnyPublisher()
-        self.client = .init()
+        self.server = try? Server()
+        server?.start()
         setupBindings()
+//        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+//            self.server?.send(self.images.randomElement()!.jpegData(compressionQuality: 0.3)!)
+//        }
     }
     
     private func setupBindings() {
-        didReceivedImage.sink { [weak self] in
-            self?.client.send(frames: [$0])
-        }
-        .store(in: &disposables)
+        didReceivedImage
+            .sink { [weak self] in
+                self?.server?.send($0)
+            }
+            .store(in: &disposables)
         
         $quality
             .sink { [weak self] in

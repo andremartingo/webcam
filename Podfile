@@ -5,7 +5,7 @@ target 'server' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod "SwiftCompressor"
+
   # Pods for server
 
   target 'serverTests' do
@@ -22,7 +22,7 @@ end
 target 'webcam' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod "SwiftCompressor"
+
 
   # Pods for webcam
 

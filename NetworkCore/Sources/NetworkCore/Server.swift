@@ -44,9 +44,9 @@ public class Server {
         listener.start(queue: .main)
     }
 
-    public func send(_ data: Data) {
-        connections.forEach {
-            $0.send(data)
+    public func send(_ data: [Data]) {
+        connections.forEach { connection in
+            connection.send(data.first!)
         }
     }
 }

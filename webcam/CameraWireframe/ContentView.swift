@@ -36,6 +36,8 @@ struct ContentView: View {
                         Spacer()
                     }
                     
+                    Text(viewModel.description)
+                    
                     
                     Slider(value: $viewModel.compression, in: 0...1)
                         .padding()

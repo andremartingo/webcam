@@ -24,13 +24,16 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     private var disposables = Set<AnyCancellable>()
     
     @Published
-    private(set) var didReceivedImage = PassthroughSubject<Data, Never>()
+    private(set) var didReceivedImage = PassthroughSubject<Frame, Never>()
     
     @Published
     var quality: Int = 0
     
     @Published
     var compression: Float = 0
+    
+    @Published
+    var description: String = ""
     
     let didChangeCamera: AnyPublisher<Void, Never>
     private let _changeCamera = PassthroughSubject<Void, Never>()
@@ -55,8 +58,10 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     
     private func setupBindings() {
         didReceivedImage
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] in
-                self?.server?.send($0)
+                self?.description = $0.topHalf.description
+                self?.server?.send([$0.topHalf, $0.bottomHalf])
             }
             .store(in: &disposables)
         

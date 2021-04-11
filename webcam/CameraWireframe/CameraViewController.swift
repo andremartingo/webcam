@@ -13,12 +13,12 @@ import Combine
 
 struct CameraView: UIViewRepresentable {
     
-    let didReceivedImage: (Data) -> Void
+    let didReceivedImage: (Frame) -> Void
     let changeCamera: AnyPublisher<Void, Never>
     let didChangeQuality: AnyPublisher<Quality, Never>
     let didChangeCompression: AnyPublisher<Float, Never>
     
-    init(didReceivedImage: @escaping (Data) -> Void,
+    init(didReceivedImage: @escaping (Frame) -> Void,
          changeCamera: AnyPublisher<Void, Never>,
          didChangeQuality: AnyPublisher<Quality, Never>,
          didChangeCompression: AnyPublisher<Float, Never>) {
@@ -42,7 +42,7 @@ class CameraViewController: UIView {
     private var session: AVCaptureSession?
     private var captureVideoOutput: AVCaptureVideoDataOutput?
     private var deviceInput: AVCaptureDeviceInput?
-    let didReceivedImage: (Data) -> Void
+    let didReceivedImage: (Frame) -> Void
     
     let didChangeCamera: AnyPublisher<Void, Never>
     let didChangeQuality: AnyPublisher<Quality, Never>
@@ -67,7 +67,7 @@ class CameraViewController: UIView {
     
     var compression: Float = 0
 
-    init(didReceivedImage: @escaping (Data) -> Void,
+    init(didReceivedImage: @escaping (Frame) -> Void,
          changeCamera: AnyPublisher<Void, Never>,
          changeQuality: AnyPublisher<Quality, Never>,
          changeCompression: AnyPublisher<Float, Never>) {
@@ -163,9 +163,14 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 //        print(">>> Compressed Size: \(frame?.description)")
         
         // Max bytes is 8K
-        didReceivedImage(frame!)
+        didReceivedImage(.init(topHalf: frame!, bottomHalf: frame!))
     }
 
+}
+
+struct Frame {
+    let topHalf: Data
+    let bottomHalf: Data
 }
 
 
@@ -177,8 +182,9 @@ extension CIImage {
     func compressed(by factor: CGFloat) -> Data? {
         let context = CIContext()
         let cgImage = context.createCGImage(self, from: self.extent)!
-        let image = UIImage(cgImage: cgImage)
-        return image.jpegData(compressionQuality: factor)
+        let topHalf = UIImage(cgImage: cgImage).topHalf!
+        let bottomHalf = UIImage(cgImage: cgImage).bottomHalf!
+        return UIImage(cgImage: cgImage).jpegData(compressionQuality: factor)
 //        do {
 //            return try image.heicData(compressionQuality: factor)
 //        } catch {
@@ -256,37 +262,33 @@ extension AVCaptureDevice {
 
 extension UIImage {
     var topHalf: UIImage? {
-        guard let image = cgImage?
-            .cropping(to: CGRect(origin: .zero,
-                    size: CGSize(width: size.width,
-                                 height: size.height / 2 )))
-        else { return nil }
-        return UIImage(cgImage: image, scale: 1, orientation: imageOrientation)
+        guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: .zero, size: CGSize(width: size.width, height: size.height/2))) else { return nil }
+        return UIImage(cgImage: image, scale: scale, orientation: imageOrientation)
     }
+    
     var bottomHalf: UIImage? {
-        guard let image = cgImage?
-            .cropping(to: CGRect(origin: CGPoint(x: 0,
-                                                 y: size.height - (size.height/2).rounded()),
-                                 size: CGSize(width: size.width,
-                                              height: size.height -
-                                                      (size.height/2).rounded())))
-        else { return nil }
-        return UIImage(cgImage: image)
+        guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: CGPoint(x: 0,  y: CGFloat(Int(size.height)-Int(size.height/2))), size: CGSize(width: size.width, height: CGFloat(Int(size.height) - Int(size.height/2))))) else { return nil }
+        return UIImage(cgImage: image, scale: scale, orientation: imageOrientation)
     }
+    
     var leftHalf: UIImage? {
-        guard let image = cgImage?
-            .cropping(to: CGRect(origin: .zero,
-                                 size: CGSize(width: size.width/2,
-                                              height: size.height)))
-        else { return nil }
-        return UIImage(cgImage: image)
+        guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: .zero, size: CGSize(width: size.width/2, height: size.height))) else { return nil }
+        return UIImage(cgImage: image, scale: scale, orientation: imageOrientation)
     }
+    
     var rightHalf: UIImage? {
-        guard let image = cgImage?
-            .cropping(to: CGRect(origin: CGPoint(x: size.width - (size.width/2).rounded(), y: 0),
-                                 size: CGSize(width: size.width - (size.width/2).rounded(),
-                                              height: size.height)))
-        else { return nil }
-        return UIImage(cgImage: image)
+        guard let cgImage = cgImage, let image = cgImage.cropping(to: CGRect(origin: CGPoint(x: CGFloat(Int(size.width)-Int((size.width/2))), y: 0), size: CGSize(width: CGFloat(Int(size.width)-Int((size.width/2))), height: size.height)))
+            else { return nil }
+        return UIImage(cgImage: image, scale: scale, orientation: imageOrientation)
+    }
+    
+    var splitedInFourParts: [UIImage] {
+        guard case let topHalf = topHalf,
+              case let bottomHalf = bottomHalf,
+            let topLeft = topHalf?.leftHalf,
+            let topRight = topHalf?.rightHalf,
+            let bottomLeft = bottomHalf?.leftHalf,
+            let bottomRight = bottomHalf?.rightHalf else{ return [] }
+        return [topLeft, topRight, bottomLeft, bottomRight]
     }
 }

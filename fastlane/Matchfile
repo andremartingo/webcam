@@ -1,0 +1,7 @@
+git_url("git@github.com:andremartingo/certificates.git")
+git_branch("webcam")
+storage_mode("git")
+
+username ENV["APPLE_ID"]
+
+app_identifier ENV["APP_IDENTIFIER"]

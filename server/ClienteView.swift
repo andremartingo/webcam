@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ServerView: View {
-    @ObservedObject var viewModel = ServerViewModel()
+struct ClienteView: View {
+    @ObservedObject
+    var viewModel = ClientViewModel()
     
     var body: some View {
         VStack {
@@ -29,7 +30,7 @@ struct ServerView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ServerView()
+        ClienteView()
             .previewLayout(.sizeThatFits)
     }
 }

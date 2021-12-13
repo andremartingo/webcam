@@ -10,6 +10,11 @@ import Combine
 import UIKit
 import NetworkCore
 
+enum State {
+    case connected
+    case notConnected
+}
+
 protocol CameraViewModelProtocol {
     var didChangeCamera: AnyPublisher<Void, Never> { get }
 }
@@ -30,10 +35,13 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     var quality: Int = 0
     
     @Published
-    var compression: Float = 0
+    var compression: Float = 0.1
     
     @Published
     var description: String = ""
+    
+    @Published
+    var connectionState: State = .notConnected
     
     let didChangeCamera: AnyPublisher<Void, Never>
     private let _changeCamera = PassthroughSubject<Void, Never>()
@@ -45,7 +53,10 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     private let server: Server?
     private var timer: Timer?
     private let images = [UIImage(named: "balance-light")!, UIImage(named: "cardColor-light")!]
-    init() {
+    private let wireframe: CameraWireframe
+    
+    init(wireframe: CameraWireframe) {
+        self.wireframe = wireframe
         self.didChangeCamera = _changeCamera.eraseToAnyPublisher()
         self.didChangeQuality = _changeQuality.eraseToAnyPublisher()
         self.server = try? Server()
@@ -71,6 +82,25 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
                 self?.changeQuality(quality: value)
             }
             .store(in: &disposables)
+        
+        server?.$connections
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                if $0.isEmpty == false {
+                    self?.connectionState = .notConnected
+                } else {
+                    self?.connectionState = .connected
+                }
+            }
+            .store(in: &disposables)
+    }
+    
+    func showOnbard() {
+        wireframe.showOnbarding()
+    }
+    
+    func share() {
+        wireframe.share()
     }
     
     func changeCamera() {

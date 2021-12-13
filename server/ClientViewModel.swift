@@ -1,10 +1,3 @@
-//
-//  ServerViewModel.swift
-//  server
-//
-//  Created by Andre Martingo on 05.03.21.
-//
-
 import Combine
 import UIKit
 import NetworkCore
@@ -14,7 +7,7 @@ enum State {
     case notConnected
 }
 
-class ServerViewModel: ObservableObject {
+class ClientViewModel: ObservableObject {
     @Published
     private (set) var image: UIImage
     

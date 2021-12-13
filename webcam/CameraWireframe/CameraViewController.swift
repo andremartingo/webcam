@@ -10,9 +10,9 @@ import SwiftUI
 import AVFoundation
 import UIKit
 import Combine
+import TinyConstraints
 
 struct CameraView: UIViewRepresentable {
-    
     let didReceivedImage: (Frame) -> Void
     let changeCamera: AnyPublisher<Void, Never>
     let didChangeQuality: AnyPublisher<Quality, Never>
@@ -51,7 +51,8 @@ class CameraViewController: UIView {
     private let sessionQueue = DispatchQueue(label: "session queue")
     
     private let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera,
-                                                                                             .builtInDualCamera, .builtInTrueDepthCamera],
+                                                                                             .builtInDualCamera,
+                                                                                             .builtInTrueDepthCamera],
                                                                                mediaType: .video,
                                                                                position: .unspecified)
     
@@ -65,7 +66,7 @@ class CameraViewController: UIView {
         return layer as! AVCaptureVideoPreviewLayer
     }
     
-    var compression: Float = 0
+    var compression: Float = 0.1
 
     init(didReceivedImage: @escaping (Frame) -> Void,
          changeCamera: AnyPublisher<Void, Never>,
@@ -78,6 +79,7 @@ class CameraViewController: UIView {
         super.init(frame: .zero)
         setupCamera()
         setupCameraOutput()
+        videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     }
     
     required init?(coder: NSCoder) {
@@ -139,7 +141,18 @@ class CameraViewController: UIView {
 
     func changeQuality(quality: Quality) {
         session?.beginConfiguration()
-        session?.sessionPreset = quality == Quality.sd ? .medium : .hd1280x720
+        let preset: AVCaptureSession.Preset = {
+            switch quality {
+            case .sd:
+                self.compression = 0.1
+                return .medium
+            case .hd:
+                self.compression = 0.9
+                return .medium
+            }
+        }()
+        
+        session?.sessionPreset = preset
         session?.commitConfiguration()
     }
 

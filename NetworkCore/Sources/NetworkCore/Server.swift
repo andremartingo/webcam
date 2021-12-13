@@ -9,10 +9,10 @@ import Foundation
 import Network
 
 public class Server {
-
     let listener: NWListener
 
-    var connections: [Connection] = []
+    @Published
+    public var connections: [Connection] = []
     
     @Published
     public var connected: Bool = false

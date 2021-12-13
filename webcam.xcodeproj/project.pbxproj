@@ -16,19 +16,24 @@
 		30122C3D25EC46B40056CFA5 /* webcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C3C25EC46B40056CFA5 /* webcamTests.swift */; };
 		30122C4825EC46B40056CFA5 /* webcamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C4725EC46B40056CFA5 /* webcamUITests.swift */; };
 		30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */; };
+		302F7A6027629AF500A7CBB1 /* virtualcamera.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */; };
+		302F7A632762AA5C00A7CBB1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 302F7A622762AA5C00A7CBB1 /* TinyConstraints */; };
 		3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */; };
 		304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */; };
-		30C27DEF260922B300E69103 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DEE260922B300E69103 /* SwiftPackageProductDependency */; };
-		30C27DF7260922C100E69103 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DF6260922C100E69103 /* SwiftPackageProductDependency */; };
+		305AB1CE2763E5DA00D1C768 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1CD2763E5DA00D1C768 /* OnboardView.swift */; };
+		305AB1D02763EAA900D1C768 /* OnboardWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1CF2763EAA900D1C768 /* OnboardWireframe.swift */; };
+		305AB1D22763EAEA00D1C768 /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1D12763EAEA00D1C768 /* OnboardViewModel.swift */; };
+		30C27DEF260922B300E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DEE260922B300E69103 /* NetworkCore */; };
+		30C27DF7260922C100E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DF6260922C100E69103 /* NetworkCore */; };
 		30D8460525F2DB7300A402DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460425F2DB7300A402DC /* AppDelegate.swift */; };
 		30D8460725F2DB7300A402DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460625F2DB7300A402DC /* SceneDelegate.swift */; };
-		30D8460925F2DB7300A402DC /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460825F2DB7300A402DC /* ServerView.swift */; };
+		30D8460925F2DB7300A402DC /* ClienteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460825F2DB7300A402DC /* ClienteView.swift */; };
 		30D8460B25F2DB7300A402DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8460A25F2DB7300A402DC /* Assets.xcassets */; };
 		30D8460E25F2DB7300A402DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8460D25F2DB7300A402DC /* Preview Assets.xcassets */; };
 		30D8461125F2DB7300A402DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D8460F25F2DB7300A402DC /* LaunchScreen.storyboard */; };
 		30D8461C25F2DB7300A402DC /* serverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8461B25F2DB7300A402DC /* serverTests.swift */; };
 		30D8462725F2DB7400A402DC /* serverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8462625F2DB7400A402DC /* serverUITests.swift */; };
-		30D8466725F2E0AD00A402DC /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8466625F2E0AD00A402DC /* ServerViewModel.swift */; };
+		30D8466725F2E0AD00A402DC /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8466625F2E0AD00A402DC /* ClientViewModel.swift */; };
 		4A0E8E3ED6F74534722D72B7 /* Pods_webcamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB534EB2BFBC35238EEDD7B0 /* Pods_webcamTests.framework */; };
 		6F9DD313EB719B50EB7383F5 /* Pods_server.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A089E38A52BBF77E00724 /* Pods_server.framework */; };
 		8FDC9C6F526F1F86FAD9FB53 /* Pods_webcam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C174F1350FFE3A75C0BD83 /* Pods_webcam.framework */; };
@@ -86,13 +91,17 @@
 		30122C4725EC46B40056CFA5 /* webcamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webcamUITests.swift; sourceTree = "<group>"; };
 		30122C4925EC46B40056CFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; path = virtualcamera.pkg; sourceTree = "<group>"; };
 		3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWireframe.swift; sourceTree = "<group>"; };
+		305AB1CD2763E5DA00D1C768 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		305AB1CF2763EAA900D1C768 /* OnboardWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWireframe.swift; sourceTree = "<group>"; };
+		305AB1D12763EAEA00D1C768 /* OnboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewModel.swift; sourceTree = "<group>"; };
 		30865D1A260922840072D550 /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
 		30D8460225F2DB7300A402DC /* server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D8460425F2DB7300A402DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D8460625F2DB7300A402DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30D8460825F2DB7300A402DC /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
+		30D8460825F2DB7300A402DC /* ClienteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienteView.swift; sourceTree = "<group>"; };
 		30D8460A25F2DB7300A402DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D8460D25F2DB7300A402DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D8461025F2DB7300A402DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +113,7 @@
 		30D8462625F2DB7400A402DC /* serverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serverUITests.swift; sourceTree = "<group>"; };
 		30D8462825F2DB7400A402DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D8465725F2DC6B00A402DC /* server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = server.entitlements; sourceTree = "<group>"; };
-		30D8466625F2E0AD00A402DC /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		30D8466625F2E0AD00A402DC /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
 		35DE6766B95FDCE4E3BA6124 /* Pods-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-server.release.xcconfig"; path = "Target Support Files/Pods-server/Pods-server.release.xcconfig"; sourceTree = "<group>"; };
 		3E2E6F3EE818CE16276E1DD6 /* Pods_serverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E641EE2A30164D159178556 /* Pods-server-serverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-server-serverUITests.release.xcconfig"; path = "Target Support Files/Pods-server-serverUITests/Pods-server-serverUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +137,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C27DEF260922B300E69103 /* BuildFile in Frameworks */,
+				30C27DEF260922B300E69103 /* NetworkCore in Frameworks */,
 				8FDC9C6F526F1F86FAD9FB53 /* Pods_webcam.framework in Frameworks */,
+				302F7A632762AA5C00A7CBB1 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C27DF7260922C100E69103 /* BuildFile in Frameworks */,
+				30C27DF7260922C100E69103 /* NetworkCore in Frameworks */,
 				6F9DD313EB719B50EB7383F5 /* Pods_server.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +219,8 @@
 		30122C2425EC46B20056CFA5 /* webcam */ = {
 			isa = PBXGroup;
 			children = (
+				305AB1CC2763E5C100D1C768 /* Onboard */,
+				302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */,
 				304C0F8E25F00F74005A5D22 /* CameraWireframe */,
 				30122C2525EC46B20056CFA5 /* AppDelegate.swift */,
 				30122C2725EC46B20056CFA5 /* SceneDelegate.swift */,
@@ -257,6 +269,16 @@
 			path = CameraWireframe;
 			sourceTree = "<group>";
 		};
+		305AB1CC2763E5C100D1C768 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				305AB1CD2763E5DA00D1C768 /* OnboardView.swift */,
+				305AB1CF2763EAA900D1C768 /* OnboardWireframe.swift */,
+				305AB1D12763EAEA00D1C768 /* OnboardViewModel.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
 		30B3B4EC25F2AEE1003DB652 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,8 +295,8 @@
 		30D8460325F2DB7300A402DC /* server */ = {
 			isa = PBXGroup;
 			children = (
-				30D8460825F2DB7300A402DC /* ServerView.swift */,
-				30D8466625F2E0AD00A402DC /* ServerViewModel.swift */,
+				30D8460825F2DB7300A402DC /* ClienteView.swift */,
+				30D8466625F2E0AD00A402DC /* ClientViewModel.swift */,
 				30D8465725F2DC6B00A402DC /* server.entitlements */,
 				30D8460425F2DB7300A402DC /* AppDelegate.swift */,
 				30D8460625F2DB7300A402DC /* SceneDelegate.swift */,
@@ -328,7 +350,6 @@
 				B9443B4A66F45DB1BBD2C977 /* Pods-webcamTests.debug.xcconfig */,
 				F46CEEE493CC21282D221FFE /* Pods-webcamTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -350,7 +371,8 @@
 			);
 			name = webcam;
 			packageProductDependencies = (
-				30C27DEE260922B300E69103 /* SwiftPackageProductDependency */,
+				30C27DEE260922B300E69103 /* NetworkCore */,
+				302F7A622762AA5C00A7CBB1 /* TinyConstraints */,
 			);
 			productName = webcam;
 			productReference = 30122C2225EC46B20056CFA5 /* webcam.app */;
@@ -409,7 +431,7 @@
 			);
 			name = server;
 			packageProductDependencies = (
-				30C27DF6260922C100E69103 /* SwiftPackageProductDependency */,
+				30C27DF6260922C100E69103 /* NetworkCore */,
 			);
 			productName = server;
 			productReference = 30D8460225F2DB7300A402DC /* server.app */;
@@ -495,6 +517,9 @@
 				Base,
 			);
 			mainGroup = 30122C1925EC46B20056CFA5;
+			packageReferences = (
+				302F7A612762AA5C00A7CBB1 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 30122C2325EC46B20056CFA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -515,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30122C3225EC46B30056CFA5 /* LaunchScreen.storyboard in Resources */,
+				302F7A6027629AF500A7CBB1 /* virtualcamera.pkg in Resources */,
 				30122C2F25EC46B30056CFA5 /* Preview Assets.xcassets in Resources */,
 				30122C2C25EC46B30056CFA5 /* Assets.xcassets in Resources */,
 			);
@@ -700,6 +726,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305AB1D02763EAA900D1C768 /* OnboardWireframe.swift in Sources */,
+				305AB1D22763EAEA00D1C768 /* OnboardViewModel.swift in Sources */,
+				305AB1CE2763E5DA00D1C768 /* OnboardView.swift in Sources */,
 				30122C2625EC46B20056CFA5 /* AppDelegate.swift in Sources */,
 				304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */,
 				30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */,
@@ -731,8 +760,8 @@
 			files = (
 				30D8460525F2DB7300A402DC /* AppDelegate.swift in Sources */,
 				30D8460725F2DB7300A402DC /* SceneDelegate.swift in Sources */,
-				30D8466725F2E0AD00A402DC /* ServerViewModel.swift in Sources */,
-				30D8460925F2DB7300A402DC /* ServerView.swift in Sources */,
+				30D8466725F2E0AD00A402DC /* ClientViewModel.swift in Sources */,
+				30D8460925F2DB7300A402DC /* ClienteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,7 +950,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"webcam/Preview Content\"";
-				DEVELOPMENT_TEAM = JUS3FL3A74;
+				DEVELOPMENT_TEAM = L3GTYCSW62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = webcam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -943,7 +972,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"webcam/Preview Content\"";
-				DEVELOPMENT_TEAM = JUS3FL3A74;
+				DEVELOPMENT_TEAM = L3GTYCSW62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = webcam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1054,7 +1083,7 @@
 				CODE_SIGN_ENTITLEMENTS = server/server.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"server/Preview Content\"";
-				DEVELOPMENT_TEAM = JUS3FL3A74;
+				DEVELOPMENT_TEAM = L3GTYCSW62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = server/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1078,7 +1107,7 @@
 				CODE_SIGN_ENTITLEMENTS = server/server.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"server/Preview Content\"";
-				DEVELOPMENT_TEAM = JUS3FL3A74;
+				DEVELOPMENT_TEAM = L3GTYCSW62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = server/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1249,12 +1278,28 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		302F7A612762AA5C00A7CBB1 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		30C27DEE260922B300E69103 /* SwiftPackageProductDependency */ = {
+		302F7A622762AA5C00A7CBB1 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 302F7A612762AA5C00A7CBB1 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+		30C27DEE260922B300E69103 /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkCore;
 		};
-		30C27DF6260922C100E69103 /* SwiftPackageProductDependency */ = {
+		30C27DF6260922C100E69103 /* NetworkCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkCore;
 		};

@@ -8,5 +8,5 @@
 enum Constants {
     static let serviceType = "_camera._tcp"
     static let domain = "local"
-    static let serverName = "mnyserver"
+    static let serverName = "testserver"
 }

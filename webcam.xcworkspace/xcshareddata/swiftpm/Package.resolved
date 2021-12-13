@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TinyConstraints",
+        "repositoryURL": "https://github.com/roberthein/TinyConstraints.git",
+        "state": {
+          "branch": "master",
+          "revision": "3262e5c591d4ab6272255df2087a01bbebd138dc",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

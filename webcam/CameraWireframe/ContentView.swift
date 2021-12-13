@@ -11,39 +11,49 @@ struct ContentView: View {
     @ObservedObject
     var viewModel: CameraViewModel
     
-    //    let binding: Binding<Bool>
-    
     init(viewModel: CameraViewModel) {
         self.viewModel = viewModel
-        //        let binding = Binding<Bool>.init(get: { return viewModel.output }, set: { _ in viewModel.changeCamera() })
-        //        self.binding = binding
     }
     
     var body: some View {
-        GeometryReader { reader in
             ZStack {
-                Color.black.edgesIgnoringSafeArea(.all)
-                
+                CameraView(didReceivedImage: { viewModel.didReceivedImage.send($0) },
+                           changeCamera: viewModel.didChangeCamera,
+                           didChangeQuality: viewModel.didChangeQuality,
+                           didChangeCompression: viewModel.$compression.eraseToAnyPublisher())
+                    .ignoresSafeArea()
                 VStack {
-                    CameraView(didReceivedImage: { viewModel.didReceivedImage.send($0) },
-                               changeCamera: viewModel.didChangeCamera,
-                               didChangeQuality: viewModel.didChangeQuality,
-                               didChangeCompression: viewModel.$compression.eraseToAnyPublisher())
+                    Spacer()
                     HStack {
-                        Spacer()
-                        flipCameraButton
-                        changeQuality
+                        Circle()
+                            .fill(viewModel.connectionState == .connected ? Color.green : Color.red)
+                            .frame(width: 20, height: 20)
+                        
+                        Text(viewModel.connectionState == .connected ? "Connected" :"Connecting...")
+                            .padding()
+                        
                         Spacer()
                     }
+                    .offset(x: 6, y: 0)
                     
-                    Text(viewModel.description)
+                    HStack {
+                        flipCameraButton
+                        changeQuality
+                        questionButton
+                        Spacer()
+                    }
+
                     
-                    
-                    Slider(value: $viewModel.compression, in: 0...1)
-                        .padding()
+//                    #if DEBUG
+//                    Text(viewModel.description)
+//
+//
+//                    Slider(value: $viewModel.compression, in: 0...1)
+//                        .padding()
+//                    #endif
                 }
+                .padding()
             }
-        }
     }
     
     var flipCameraButton: some View {
@@ -55,6 +65,19 @@ struct ContentView: View {
                 .frame(width: 45, height: 45, alignment: .center)
                 .overlay(
                     Image(systemName: "camera.rotate.fill")
+                        .foregroundColor(.white))
+        })
+    }
+    
+    var questionButton: some View {
+        Button(action: {
+            viewModel.showOnbard()
+        }, label: {
+            Circle()
+                .foregroundColor(Color.gray.opacity(0.2))
+                .frame(width: 45, height: 45, alignment: .center)
+                .overlay(
+                    Image(systemName: "questionmark")
                         .foregroundColor(.white))
         })
     }
@@ -71,8 +94,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(viewModel: .init())
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(viewModel: .init())
+//    }
+//}

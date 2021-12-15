@@ -33,7 +33,7 @@ class ClientViewModel: ObservableObject {
                     }
                     DispatchQueue.main.async {
                         self.connectionState = .connected
-                        self.image = image.rotate(deg: 90)
+                        self.image = image
                     }
                 }
             }

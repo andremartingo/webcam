@@ -169,8 +169,7 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-
-        let frame = ciImage.compressed(by: .init(self.compression))
+        let frame = ciImage.oriented(.left).compressed(by: .init(self.compression))
         let origin = ciImage.compressed(by: 1)
 //        print(">>> Uncompressed Size: \(origin?.description)")
 //        print(">>> Compressed Size: \(frame?.description)")

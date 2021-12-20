@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import UIKit
 import NetworkCore
+import StoreKit
 
 enum State {
     case connected
@@ -89,6 +90,9 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
                 if $0.isEmpty {
                     self?.connectionState = .notConnected
                 } else {
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
                     self?.connectionState = .connected
                 }
             }

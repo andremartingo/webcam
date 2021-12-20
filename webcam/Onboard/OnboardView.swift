@@ -33,6 +33,7 @@ struct OnboardView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Download and install in your Mac")
                             .bold()
+                        Text("Click on .pkg with right click and then Open otherwise it will not open.")
                         Button(action: { viewModel.showShare() }) {
                             HStack {
                                 Image(systemName: "square.and.arrow.up")

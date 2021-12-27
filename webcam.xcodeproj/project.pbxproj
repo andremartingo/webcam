@@ -16,13 +16,13 @@
 		30122C3D25EC46B40056CFA5 /* webcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C3C25EC46B40056CFA5 /* webcamTests.swift */; };
 		30122C4825EC46B40056CFA5 /* webcamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C4725EC46B40056CFA5 /* webcamUITests.swift */; };
 		30122C5F25EC4AF20056CFA5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */; };
-		302F7A6027629AF500A7CBB1 /* virtualcamera.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */; };
 		302F7A632762AA5C00A7CBB1 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 302F7A622762AA5C00A7CBB1 /* TinyConstraints */; };
 		3033582425EC5A1A00D6DDCC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */; };
 		304C0F8A25F00ECF005A5D22 /* CameraWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */; };
 		305AB1CE2763E5DA00D1C768 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1CD2763E5DA00D1C768 /* OnboardView.swift */; };
 		305AB1D02763EAA900D1C768 /* OnboardWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1CF2763EAA900D1C768 /* OnboardWireframe.swift */; };
 		305AB1D22763EAEA00D1C768 /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305AB1D12763EAEA00D1C768 /* OnboardViewModel.swift */; };
+		3097A95D2779F1FB001A0F24 /* virtualcamera.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 3097A95C2779F1FB001A0F24 /* virtualcamera.pkg */; };
 		30C27DEF260922B300E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DEE260922B300E69103 /* NetworkCore */; };
 		30C27DF7260922C100E69103 /* NetworkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 30C27DF6260922C100E69103 /* NetworkCore */; };
 		30D8460525F2DB7300A402DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8460425F2DB7300A402DC /* AppDelegate.swift */; };
@@ -91,13 +91,13 @@
 		30122C4725EC46B40056CFA5 /* webcamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webcamUITests.swift; sourceTree = "<group>"; };
 		30122C4925EC46B40056CFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30122C5E25EC4AF20056CFA5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; path = virtualcamera.pkg; sourceTree = "<group>"; };
 		3033582325EC5A1A00D6DDCC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		304C0F8925F00ECF005A5D22 /* CameraWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWireframe.swift; sourceTree = "<group>"; };
 		305AB1CD2763E5DA00D1C768 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		305AB1CF2763EAA900D1C768 /* OnboardWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardWireframe.swift; sourceTree = "<group>"; };
 		305AB1D12763EAEA00D1C768 /* OnboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewModel.swift; sourceTree = "<group>"; };
 		30865D1A260922840072D550 /* NetworkCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NetworkCore; sourceTree = "<group>"; };
+		3097A95C2779F1FB001A0F24 /* virtualcamera.pkg */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.installer-pkg"; path = virtualcamera.pkg; sourceTree = SOURCE_ROOT; };
 		30D8460225F2DB7300A402DC /* server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = server.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D8460425F2DB7300A402DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D8460625F2DB7300A402DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 		30122C2425EC46B20056CFA5 /* webcam */ = {
 			isa = PBXGroup;
 			children = (
+				3097A95C2779F1FB001A0F24 /* virtualcamera.pkg */,
 				305AB1CC2763E5C100D1C768 /* Onboard */,
-				302F7A5F27629AF500A7CBB1 /* virtualcamera.pkg */,
 				304C0F8E25F00F74005A5D22 /* CameraWireframe */,
 				30122C2525EC46B20056CFA5 /* AppDelegate.swift */,
 				30122C2725EC46B20056CFA5 /* SceneDelegate.swift */,
@@ -540,7 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30122C3225EC46B30056CFA5 /* LaunchScreen.storyboard in Resources */,
-				302F7A6027629AF500A7CBB1 /* virtualcamera.pkg in Resources */,
+				3097A95D2779F1FB001A0F24 /* virtualcamera.pkg in Resources */,
 				30122C2F25EC46B30056CFA5 /* Preview Assets.xcassets in Resources */,
 				30122C2C25EC46B30056CFA5 /* Assets.xcassets in Resources */,
 			);

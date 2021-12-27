@@ -8,6 +8,10 @@
 import UIKit
 import SwiftUI
 
+func isMock() -> Bool {
+    return ProcessInfo.processInfo.environment["-isMock"] != nil
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     

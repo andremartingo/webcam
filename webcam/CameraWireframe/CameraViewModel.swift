@@ -53,7 +53,6 @@ class CameraViewModel: ObservableObject, CameraViewModelProtocol {
     public var output: Bool = false
     private let server: Server?
     private var timer: Timer?
-    private let images = [UIImage(named: "balance-light")!, UIImage(named: "cardColor-light")!]
     private let wireframe: CameraWireframe
     
     init(wireframe: CameraWireframe) {

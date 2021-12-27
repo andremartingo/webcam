@@ -35,7 +35,7 @@ platform :ios do
     )
 
     gym(
-      scheme: "release",
+      scheme: "webcam",
       buildlog_path: "~/Library/Logs/gym/#{ENV['BUILD_TAG']}-itunes_connect"
     )
 
